@@ -28,13 +28,25 @@
 
 
     </header>
+
+
     
-    <article class="flex mt-10" v-for="post of posts" :key="post.slug">
-      <div class="mx-auto">
-        <!-- <h1> {{ post.title }}</h1> -->
-        <h2 class="mt-5"> {{ post.description }} </h2>
-        <nuxt-content class="mt-5" :document="post" />
-        <p class="mt-5"> Posted on: {{ post.date }} </p>
+    <article class="mt-10 mx-auto w-2/3">
+      <div >
+        <p>
+          Welcome to my page! I'm a full stack developer who can build apps from the ground up. I enjoy working in a dynamic and agile environments on products that add value to business and society. My background in business administration helps me to better understand the business question. I'm generally a flexible and responsible person that likes to learn and try new things.
+        </p>
+        <br>
+        <hr>
+      </div>
+      
+      <div class="flex" v-for="post of posts" :key="post.slug">
+        <div>
+          <!-- <h1> {{ post.title }}</h1> -->
+          <h2 class="mt-5"> {{ post.description }} </h2>
+          <nuxt-content class="mt-5" :document="post" />
+          <p class="mt-5"> date - {{ post.date }} </p>
+        </div>
       </div>
       <!-- <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink> -->
     </article>
