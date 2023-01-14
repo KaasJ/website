@@ -18,6 +18,13 @@ export default {
   },
   css: [
     '@/assets/css/main.css'
-  ]
+  ],
+  modules: [
+    '@nuxt/content'
+  ],
+  content: {
+    // https://content.nuxtjs.org/api/configuration
+  },
+
 }
 

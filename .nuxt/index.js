@@ -12,6 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_pluginclient_054d3eb1 from 'nuxt_plugin_pluginclient_054d3eb1' // Source: ./content/plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_6b06b039 from 'nuxt_plugin_pluginserver_6b06b039' // Source: ./content/plugin.server.js (mode: 'server')
+
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -60,7 +63,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Jorrit Stein","link":[{"rel":"icon","type":"image\u002Fpng","href":".\u002Ffavicon.png"}],"meta":[],"style":[],"script":[]},
+    head: {"title":"Jorrit Stein","link":[{"rel":"icon","type":"image\u002Fpng","href":".\u002Ffavicon.png"}],"script":[{"src":"https:\u002F\u002Fidentity.netlify.com\u002Fv1\u002Fnetlify-identity-widget.js"}],"meta":[],"style":[]},
 
     router,
     nuxt: {
@@ -173,6 +176,14 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (process.client && typeof nuxt_plugin_pluginclient_054d3eb1 === 'function') {
+    await nuxt_plugin_pluginclient_054d3eb1(app.context, inject)
+  }
+
+  if (process.server && typeof nuxt_plugin_pluginserver_6b06b039 === 'function') {
+    await nuxt_plugin_pluginserver_6b06b039(app.context, inject)
+  }
 
   // Lock enablePreview in context
   if (process.static && process.client) {
