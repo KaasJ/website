@@ -1,8 +1,8 @@
 <template>
-  <div class="container w-1/2 mt-20">
+  <div class="container w-full lg:w-1/2 lg:mt-20">
     <header class="flex">
-        <div class="mx-auto">
-          <img src="~/assets/logo.svg" heigth="100" width="150" />
+        <div class="lg:mx-auto">
+          <img class="invisible lg:visible" src="~/assets/logo.svg" heigth="100" width="150" />
 
           <div>
             <div class="sm:hidden">
@@ -31,7 +31,7 @@
 
 
     
-    <article class="mt-10 mx-auto w-2/3">
+    <article class="mt-10 mx-auto lg:w-2/3">
       <div >
         <p>
           Welcome to my page! I'm a full stack developer who can build apps from the ground up. I enjoy working in a dynamic and agile environments on products that add value to business and society. My background in business administration helps me to better understand the business question. I'm generally a flexible and responsible person that likes to learn and try new things.

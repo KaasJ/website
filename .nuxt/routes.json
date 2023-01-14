@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/Users/jorritstein/Desktop/prive-project/jorritstein/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_3f56f0f3"
+    "chunkName": "pages/index"
   }
 ]
