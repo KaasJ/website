@@ -3,6 +3,7 @@ export default {
   head: {
     title: 'Jorrit Stein',
     link: [{ rel: 'icon', type: 'image/png', href: './favicon.png'}],
+    script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
   },
   buildModules: [
     '@nuxt/postcss8'
