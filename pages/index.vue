@@ -1,81 +1,85 @@
 <template>
-  <div class="container w-full lg:w-1/2 lg:mt-20">
-    <header class="flex">
-        <div class="lg:mx-auto">
-          <img class="invisible lg:visible" src="~/assets/logo.svg" heigth="100" width="150" />
+  <div>
+    <p>
+      Welcome! I'm a full stack developer who can build apps from the ground up. I enjoy working in a dynamic and agile environments on products that have business and social impact. 
+      My background in business administration helps me to better understand the business request. 
+      I'm generally a flexible, social and responsible person that likes to learn and try new things. 
+    </p>
+    <p class="text-neutral-500 space-x-3 mt-3">
+      <a href="https://github.com/KaasJ" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/jorritstein/" target="_blank">LinkedIn</a>
 
-          <div>
-            <div class="sm:hidden">
-              <label for="tabs" class="sr-only">Select a tab</label>
-              <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-              <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                <option v-for="tab in tabs" :key="tab.name" :selected="tab.current">{{ tab.name }}</option>
-              </select>
-            </div>
-            <div class="hidden sm:block">
-              <div class="border-b border-gray-200">
-                <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-                  <a v-for="tab in tabs" :key="tab.name" :href="tab.href" :class="[tab.current ? 'border-indigo-500 text-indigo-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300', 'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm']" :aria-current="tab.current ? 'page' : undefined">{{ tab.name }}</a>
-                </nav>
-              </div>
-            </div>
-          </div>
+    </p>
+    <br />
+    <hr />
 
+    <div class="flex" v-for="post of slizedPosts" :key="post.slug">
+      <div class="relative mt-5 w-full">
+        <i class="mt-5 lg:mt-0 lg:absolute lg:-left-40 text-sm"> {{ toDate(post.date)}}</i>
 
-
-        </div>
-
-
-
-    </header>
-
-
-    
-    <article class="mt-10 mx-auto lg:w-2/3">
-      <div >
-        <p>
-          Welcome to my page! I'm a full stack developer who can build apps from the ground up. I enjoy working in a dynamic and agile environments on products that add value to business and society. My background in business administration helps me to better understand the business question. I'm generally a flexible and responsible person that likes to learn and try new things.
-        </p>
+        <!-- <h1> {{ post.title }}</h1> -->
+        <h1 class="mt-0"> {{ post.description }} </h1>
+        <nuxt-content class="mt-5" :document="post" />
         <br>
-        <hr>
       </div>
-      
-      <div class="flex" v-for="post of posts" :key="post.slug">
-        <div>
-          <!-- <h1> {{ post.title }}</h1> -->
-          <h2 class="mt-5"> {{ post.description }} </h2>
-          <nuxt-content class="mt-5" :document="post" />
-          <p class="mt-5"> date - {{ post.date }} </p>
-        </div>
+    </div>
+    
+    <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 mt-5">
+      <div class="lg:-mt-px lg:flex mx-auto">
+        <a v-for="page of pages" 
+          @click="pageNumber = page" 
+          :key="page + 'index'" 
+          :class="['inline-flex items-center border-t-2  px-4 pt-4 text-sm font-medium', pageNumber === page ? 
+            'border-indigo-500 text-indigo-600' : 
+            'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' ]">
+          {{ page }}
+        </a>
       </div>
-      <!-- <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink> -->
-    </article>
+    </nav>
   </div>
 </template>
 
+
 <script>
+
+const limit = 5 
+
 export default {
-   async asyncData({ $content }) {
+  name: 'blog',
+  head() {
+    return {
+      title: 'Home - Jorrit Stein'
+    }
+  },
+  data() {
+    return {
+      pageNumber: 1,
+    }
+  },
+  computed: {
+    pages() { 
+      return this.range(Math.ceil(this.posts.length / limit))
+    },
+    slizedPosts() {
+      return this.posts.slice(limit * (this.pageNumber - 1), limit * this.pageNumber)
+    }
+  },
+  async asyncData({ $content }) {
     const posts = await $content("blog").fetch();
-
-
     return {
       posts,
-    };
-  },
-  setup() {
-    const tabs = [
-      { name: 'Home', href: '#', current: true },
-      { name: 'Next', href: '#', current: false }
-    ]
-
-    return { 
-      tabs
     }
-  }
-};
+  },
+  methods: {
+    //to do use luxon 
+    toDate(date) {
+      return new Date(date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'})
+    },
+    range(length) {
+      return Array.from({ length }, (_, i) => i + 1)
+    }
+  },
 
 
-
-
+}
 </script>

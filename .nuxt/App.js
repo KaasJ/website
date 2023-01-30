@@ -10,7 +10,9 @@ import '../assets/css/main.css'
 
 import '../node_modules/prismjs/themes/prism.css'
 
-import _6f6c098b from './layouts/default.vue'
+import '../node_modules/vuetify/dist/vuetify.css'
+
+import _6f6c098b from '../layouts/default.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b) }
 

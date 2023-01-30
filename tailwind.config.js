@@ -8,10 +8,16 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    container:  {
-      center: true
-    },
     extend: {},
+    fontFamily: {
+      sans: ['Quicksand']
+    },
+    fontWeight: {
+      normal: '600'
+    },
+    fontSize: {
+      base: '1rem'
+    } 
   },
   plugins: []
 }

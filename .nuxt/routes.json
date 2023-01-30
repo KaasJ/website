@@ -1,8 +1,16 @@
 [
   {
+    "name": "next",
+    "path": "/next",
+    "component": "/Users/jorritstein/Desktop/prive-project/jorritstein/pages/next.vue",
+    "chunkName": "pages/next",
+    "_name": "_a9f96f3c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/jorritstein/Desktop/prive-project/jorritstein/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_3f56f0f3"
   }
 ]

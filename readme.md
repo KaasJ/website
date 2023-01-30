@@ -5,3 +5,6 @@ Experimenting with Nuxt, Tailwind and Netlifly
   * npm install
   * npm run dev
 
+
+## To do
+ * upgrade to nuxt3
