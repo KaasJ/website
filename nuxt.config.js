@@ -8,7 +8,6 @@ export default {
     script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
   },
   buildModules: [
-    '@nuxtjs/vuetify',
     '@nuxt/postcss8'
   ],
   components: true, // auto import 
