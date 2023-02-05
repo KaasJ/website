@@ -1,7 +1,7 @@
 ---
-title: Welcome!
+title: "TIL: Move to end of line with Nano"
 date: 2023-01-14T16:03:19.444Z
-description: "TIL: Move to end of line with nano"
+description: "TIL: Move to end of line with Nano"
 ---
 M﻿ove to last line in Nano (CLI tool) with ^_^Y
 
