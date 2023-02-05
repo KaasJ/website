@@ -1,6 +1,10 @@
 ---
 title: Welcome!
 date: 2023-01-14T16:03:19.444Z
-description: My first blog post to experiment with Nuxt, Tailwind and Netlifly cms
+description: "TIL: Run bash script from different path"
 ---
-J﻿ust getting started....
+```
+(cd /wherever/ ; sh script.sh)
+```
+
+M﻿ore info can be found [here](https://superuser.com/questions/510152/running-scripts-from-another-directory)
