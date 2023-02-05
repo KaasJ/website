@@ -1,6 +1,10 @@
 ---
 title: Welcome!
 date: 2023-01-14T16:03:19.444Z
-description: My first blog post to experiment with Nuxt, Tailwind and Netlifly cms
+description: "TIL: Move to end of line with nano"
 ---
-J﻿ust getting started....
+M﻿ove to last line in Nano (CLI tool) with ^_^Y
+
+![](/img/screenshot-2021-06-07-at-14.29.26.png)
+
+More info can be found [here](https://monovm.com/post/35/how-to-move-end-of-line-in-nano)
