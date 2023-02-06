@@ -1,6 +1,6 @@
 ---
 title: "TIL: Broken logs when using AWS sam cli "
-date: 2023-01-27T16:03:19.444Z
+date: 2023-01-28T16:03:19.444Z
 description: "TIL: Broken logs when using AWS sam cli "
 ---
 I have had this issue for a while with broken logs when using sam (see below). I found that adding 2>&1 | tr "\r" "\n" to the sam command solves the issues. 

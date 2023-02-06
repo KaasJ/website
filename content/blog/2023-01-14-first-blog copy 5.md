@@ -1,6 +1,6 @@
 ---
 title: "TIL: Postgresql union vs union all"
-date: 2023-01-27T16:03:19.444Z
+date: 2023-01-16T16:03:19.444Z
 description: "TIL: Postgresql union vs union all"
 ---
 **union all** returns all rows.\
