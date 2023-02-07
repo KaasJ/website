@@ -3,7 +3,7 @@ title: "TIL: Do not stringify an error in a try / catch"
 date: 2023-02-07T22:57:02.625Z
 description: "TIL: Do not stringify an error in a try / catch"
 ---
-B﻿ug found during debugging production issue
+Unexpected behaviour of a stringified error in try / catch
 
 ![](/img/screenshot-2022-10-06-at-14.02.22.png)
 
