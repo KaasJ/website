@@ -17,11 +17,10 @@
     <hr />
 
     <div class="flex" v-for="post of slizedPosts" :key="post.slug">
-      <div class="relative mt-5 w-full">
-        <i class="mt-5 lg:mt-0 lg:absolute lg:-left-40 text-sm"> {{ toDate(post.date)}}</i>
-
+      <div class="lg:relative mt-5 w-full">
+        <i class="lg:absolute lg:-left-40 text-sm"> {{ toDate(post.date)}}</i>
         <!-- <h1> {{ post.title }}</h1> -->
-        <h1 class="mt-0"> {{ post.description }} </h1>
+        <h1 class="mt-3 lg:mt-0"> {{ post.description }} </h1>
         <nuxt-content class="mt-5" :document="post" />
         <br>
       </div>
