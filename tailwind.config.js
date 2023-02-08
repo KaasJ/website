@@ -15,9 +15,10 @@ module.exports = {
     fontWeight: {
       normal: '600'
     },
-    fontSize: {
-      base: '1rem'
-    } 
+    // Note: This overrules font size configuration site wide
+    // fontSize: {
+    //   base: '1rem'
+    // } 
   },
   plugins: []
 }

@@ -1,14 +1,17 @@
 <template>
   <div>
     <p>
-      Welcome! I'm a full stack developer who can build apps from the ground up. I enjoy working in a dynamic and agile environments on products that have business and social impact. 
+      Hello! I'm a full stack developer who can build apps from the ground up. I enjoy working in a dynamic and agile environments on products that have business and social impact. 
       My background in business administration helps me to better understand the business request. 
-      I'm generally a flexible, social and responsible person that likes to learn and try new things. 
+      I'm generally a flexible, social and responsible person that likes to learn and try new things.
+    </p>
+    <br>
+    <p>
+      This website is setup to experiment with technologies and keep track of some things I learned (TIL).
     </p>
     <p class="text-neutral-500 space-x-3 mt-3">
       <a href="https://github.com/KaasJ" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/jorritstein/" target="_blank">LinkedIn</a>
-
     </p>
     <br />
     <hr />
@@ -65,7 +68,7 @@ export default {
     }
   },
   async asyncData({ $content }) {
-    const posts = await $content("blog").fetch();
+    const posts = await $content("blog").sortBy('date', 'desc').fetch();
     return {
       posts,
     }
