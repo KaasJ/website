@@ -1,4 +1,4 @@
-# Resume experiment
+# Experiment
 Experimenting with Nuxt, Tailwind and Netlifly
 
 ## how to run
