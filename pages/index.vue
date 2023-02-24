@@ -9,9 +9,9 @@
     <p>
       This website is setup to experiment with technologies and keep track of some things I learned (TIL).
     </p>
-    <p class="text-neutral-500 space-x-3 mt-3">
-      <a href="https://github.com/KaasJ" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/jorritstein/" target="_blank">LinkedIn</a>
+    <p class="space-x-3 mt-4">
+      <a class="text-neutral-500 hover:text-indigo-600" href="https://github.com/KaasJ" target="_blank">GitHub</a>
+      <a class="text-neutral-500 hover:text-indigo-600" href="https://www.linkedin.com/in/jorritstein/" target="_blank">LinkedIn</a>
     </p>
     <br />
     <hr />
