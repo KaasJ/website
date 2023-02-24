@@ -5,6 +5,10 @@ description: "TIL: Nullish Coalescing Operator ??"
 ---
 A﻿lternative to logical OR operator. It return the right hand value only if the left hand value is either NULL or undefined.
 
-![](/img/screenshot-2021-05-03-at-13.47.39.png)
+<br />
+
+![](/img/screenshot-2023-02-24-at-16.10.22.png)
+
+<br />
 
 More [info](https://dev.to/hereisnaman/logical-or-vs-nullish-coalescing-operator-in-javascript-3851)

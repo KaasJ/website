@@ -85,3 +85,18 @@ export default {
 
 }
 </script>
+
+<!-- Note: Using scoped here prevents css to apply on child component --> 
+<style lang="scss">
+  .nuxt-content {
+    img {
+      border-radius: 40px;
+      padding: 10px;
+      margin: 10px auto
+    }
+    a {
+      color: rgb(79, 70, 229)
+    } 
+  }
+  
+</style>
