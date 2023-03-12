@@ -31,7 +31,7 @@
         <a v-for="page of pages" 
           @click="pageNumber = page" 
           :key="page + 'index'" 
-          :class="['inline-flex items-center border-t-2  px-4 pt-4 text-sm font-medium', pageNumber === page ? 
+          :class="['inline-flex items-center border-t-2  px-4 pt-4 text-2xl mb-5 font-medium', pageNumber === page ? 
             'border-indigo-500 text-indigo-600' : 
             'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' ]">
           {{ page }}
